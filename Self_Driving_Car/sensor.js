@@ -1,4 +1,4 @@
-class sensor{
+class Sensor{
     constructor(car){
         this.car=car;
         this.rayCount=3;
@@ -14,7 +14,7 @@ class sensor{
                 this.raySpread/2,
                 -this.raySpread/2,
                 i/(this.rayCount-1)
-            );
+            )+this.car.angle;
 
             const start={x:this.car.x, y:this.car.y};
             const end={
